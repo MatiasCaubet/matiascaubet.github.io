@@ -451,4 +451,9 @@ h1 {
   .contact-card {
     grid-column: span 12;
   }
+
+.contact-card svg {
+  max-width: 20px;
+  max-height: 20px;
+}
 }
