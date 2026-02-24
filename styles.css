@@ -389,6 +389,8 @@ h1 {
   background: linear-gradient(180deg, var(--panel), var(--panel-2));
   box-shadow: var(--shadow);
   transition: 0.2s ease;
+  text-decoration: none;
+  color: inherit;
 }
 
 .contact-card:hover {
