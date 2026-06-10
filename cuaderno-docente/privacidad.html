@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de privacidad — Cuaderno Docente</title>
+<style>
+  :root { color-scheme: light; }
+  body {
+    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    max-width: 760px; margin: 0 auto; padding: 24px 20px 64px;
+    color: #1f2937; line-height: 1.65; background: #fafaf9;
+  }
+  h1 { font-size: 1.7rem; margin-bottom: 0.2em; }
+  h2 { font-size: 1.15rem; margin-top: 2em; border-bottom: 1px solid #e5e7eb; padding-bottom: 6px; }
+  .meta { color: #6b7280; font-size: 0.9rem; }
+  ul { padding-left: 1.3em; }
+  a { color: #2563eb; }
+  .nota { background: #fffbeb; border: 1px solid #fde68a; border-radius: 8px; padding: 12px 16px; font-size: 0.95rem; }
+</style>
+</head>
+<body>
+
+<h1>Política de privacidad</h1>
+<p class="meta">Cuaderno Docente (Gestión de Cursos) · Vigente desde el 10 de junio de 2026</p>
+
+<p><strong>Cuaderno Docente</strong> es una aplicación para que docentes organicen sus cursos:
+asistencia, evaluaciones, notas y planificación de clases. Esta política explica qué datos
+trata la aplicación, con qué fin y qué derechos tenés sobre ellos.</p>
+
+<h2>Responsable del tratamiento</h2>
+<p>Matías Caubet — contacto: <a href="mailto:caubetmatias@gmail.com">caubetmatias@gmail.com</a> (Argentina).</p>
+
+<h2>Qué datos se recopilan</h2>
+<ul>
+  <li><strong>Datos de tu cuenta de docente:</strong> nombre, dirección de email y contraseña
+      (almacenada únicamente como hash criptográfico; nunca en texto plano).</li>
+  <li><strong>Datos que vos cargás para tu trabajo:</strong> escuelas, cursos, materias,
+      nombres y apellidos de estudiantes, registros de asistencia, evaluaciones, notas,
+      comentarios pedagógicos y materiales de clase (por ejemplo, PDFs).</li>
+  <li><strong>Imágenes para importación (OCR):</strong> si usás la función de importar
+      planillas desde una foto, la imagen que subís se procesa para extraer el texto.</li>
+</ul>
+<p>La aplicación no recopila ubicación, contactos, ni accede a datos del dispositivo más
+allá de lo necesario para funcionar. No se muestra publicidad ni se usan identificadores
+publicitarios.</p>
+
+<h2>Datos de estudiantes</h2>
+<div class="nota">
+  La aplicación está destinada a docentes (personas adultas). Los datos de estudiantes
+  (nombre, apellido, asistencia y calificaciones) los carga el o la docente en ejercicio de su
+  tarea profesional y bajo su responsabilidad. No se solicitan datos de contacto de los
+  estudiantes, y esos datos nunca se usan con fines distintos a brindarle el servicio al docente.
+</div>
+
+<h2>Para qué se usan los datos</h2>
+<ul>
+  <li>Prestar el servicio: guardar y mostrarte tus cursos, asistencias, notas y estadísticas.</li>
+  <li>Autenticarte y proteger tu cuenta (verificación de email, recuperación de contraseña).</li>
+  <li>Enviarte emails transaccionales (verificación, restablecimiento de contraseña). No se envía publicidad.</li>
+</ul>
+<p><strong>Tus datos no se venden ni se comparten con terceros con fines comerciales.</strong></p>
+
+<h2>Servicios de terceros que procesan datos</h2>
+<p>Para funcionar, la aplicación se apoya en estos proveedores:</p>
+<ul>
+  <li><strong>Hosting del servidor y base de datos</strong> (Railway): aloja la API y los datos del servicio.</li>
+  <li><strong>Envío de emails</strong> (Resend): procesa tu dirección de email para entregar los correos transaccionales.</li>
+  <li><strong>Reconocimiento de texto en imágenes</strong> (API de Anthropic): cuando usás la
+      importación por foto, la imagen se envía a la API de Anthropic para extraer el texto
+      (nombres y/o notas de la planilla). Según la política de la API de Anthropic, los datos
+      enviados no se utilizan para entrenar sus modelos. La imagen no se usa para ningún otro fin.</li>
+  <li><strong>Verificación de contraseñas comprometidas</strong> (Have I Been Pwned): al crear tu
+      contraseña se consulta este servicio con un fragmento anónimo del hash (k-anonimato);
+      tu contraseña nunca sale del servidor.</li>
+</ul>
+
+<h2>Seguridad</h2>
+<ul>
+  <li>Toda la comunicación entre la app y el servidor viaja cifrada (HTTPS/TLS).</li>
+  <li>Las contraseñas se almacenan con hash bcrypt.</li>
+  <li>El acceso a tus datos requiere autenticación; cada docente solo puede ver sus propios cursos.</li>
+  <li>El servidor aplica límites contra intentos de acceso por fuerza bruta.</li>
+</ul>
+
+<h2>Conservación y eliminación</h2>
+<p>Tus datos se conservan mientras tu cuenta exista. Podés eliminar tu cuenta en cualquier
+momento desde la propia aplicación (<em>Ajustes → Eliminar mi cuenta</em>) o solicitándolo por
+email. Al eliminar la cuenta se borran de forma permanente todos los datos asociados:
+cursos, estudiantes, asistencias, evaluaciones, notas, comentarios y materiales.
+Más detalles en la <a href="eliminar-cuenta.html">página de eliminación de cuenta</a>.</p>
+
+<h2>Tus derechos</h2>
+<p>Conforme a la Ley 25.326 de Protección de los Datos Personales (Argentina), podés ejercer
+los derechos de acceso, rectificación y supresión de tus datos escribiendo a
+<a href="mailto:caubetmatias@gmail.com">caubetmatias@gmail.com</a>.
+La Agencia de Acceso a la Información Pública (AAIP), en su carácter de órgano de control,
+tiene la atribución de atender denuncias y reclamos sobre incumplimiento de las normas de
+protección de datos personales.</p>
+
+<h2>Cambios a esta política</h2>
+<p>Si esta política cambia, se actualizará esta página y la fecha de vigencia. Los cambios
+sustanciales se comunicarán dentro de la aplicación.</p>
+
+</body>
+</html>
