@@ -3,614 +3,372 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Matías Caubet | Desarrollador Backend</title>
-  <meta name="description" content="Portfolio de Matías Caubet — Backend APIs con Java/Spring Boot, C#/.NET y Python para automatización de procesos." />
+  <title>Matías Caubet · Backend + IA aplicada</title>
+  <meta name="description" content="Matías Caubet, desarrollador backend (Java/Spring Boot, C#/.NET, Python). Servicios con reglas claras e IA donde las reglas terminan." />
+  <link rel="alternate" hreflang="es" href="https://matiascaubet.github.io/" />
+  <link rel="alternate" hreflang="en" href="https://matiascaubet.github.io/en/" />
 
-  <!--
-    TYPOGRAPHY SYSTEM (all upright, no italics):
-    ├─ Figtree         → títulos (geométrica humanista, moderna y seria)
-    ├─ Inter           → cuerpo / descripciones (legibilidad óptima en tech)
-    └─ IBM Plex Mono   → UI, botones, labels, tags (precisión corporativa)
-  -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://matiascaubet.github.io/" />
+  <meta property="og:title" content="Matías Caubet · Backend + IA aplicada" />
+  <meta property="og:description" content="Backend con reglas claras e IA donde las reglas terminan. Java, .NET, Python y NLP." />
+  <meta property="og:image" content="https://matiascaubet.github.io/imagenMatias.jpg" />
+  <meta property="og:locale" content="es_AR" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500;600&display=swap" rel="stylesheet" />
-
-  <!-- Font Awesome Free 6 -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%231b1a17%27/%3E%3Ctext x=%2716%27 y=%2723%27 font-family=%27Georgia%27 font-size=%2720%27 fill=%27%23f4f0e8%27 text-anchor=%27middle%27%3EM%3C/text%3E%3Ccircle cx=%2726%27 cy=%2722%27 r=%272.5%27 fill=%27%23d6402b%27/%3E%3C/svg%3E" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <a class="skip" href="#hero">Saltar al contenido</a>
+  <!-- íconos -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-gh" viewBox="0 0 16 16"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></symbol>
+    <symbol id="i-in" viewBox="0 0 16 16"><path fill="currentColor" d="M0 1.15C0 .52.52 0 1.18 0h13.64C15.48 0 16 .52 16 1.15v13.7c0 .63-.52 1.15-1.18 1.15H1.18C.52 16 0 15.48 0 14.85V1.15Zm4.94 12.23V6.17H2.542v7.21H4.94ZM3.74 5.18c.84 0 1.36-.55 1.36-1.25-.01-.71-.52-1.25-1.34-1.25-.82 0-1.36.54-1.36 1.25 0 .7.52 1.25 1.33 1.25h.01Zm4.91 8.2V9.35c0-.21.02-.43.08-.58.17-.43.57-.88 1.23-.88.87 0 1.21.66 1.21 1.63v3.86h2.4V9.25c0-2.22-1.18-3.25-2.76-3.25-1.27 0-1.84.7-2.16 1.19v.02h-.02l.02-.02V6.17h-2.4c.03.68 0 7.21 0 7.21h2.4Z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 16 16"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M4.5 11.5l7-7M5.5 4.5h6v6"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 16 16"><path fill="none" stroke="currentColor" stroke-width="1.4" d="M1.5 3.5h13v9h-13zM1.5 4l6.5 5 6.5-5"/></symbol>
+  </svg>
 
-  <!-- ════════════════ NAV ════════════════ -->
+  <a class="skip" href="#inicio">Saltar al contenido</a>
+
   <header class="topbar" data-elevate>
     <div class="wrap topbar-inner">
+      <a class="brand" href="#inicio">
+        <span class="brand-name">Matías Caubet<span class="dot">.</span></span>
+        <span class="brand-kicker mono">Notas de arquitectura</span>
+      </a>
 
-      <div class="brand">
-        Matías Caubet<span class="brand-dot">.</span>
-        <span class="brand-tag">Desarrollador Backend</span>
-      </div>
-
-      <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" data-nav-toggle>
-        <i class="fa-solid fa-bars"></i>
-      </button>
-
-      <nav class="nav" data-nav aria-label="Navegación principal">
-        <a href="#about"><i class="fa-regular fa-user"></i>Acerca</a>
-        <a href="#projects"><i class="fa-solid fa-layer-group"></i>Proyectos</a>
-        <a href="#repos"><i class="fa-solid fa-code-branch"></i>Repos</a>
-        <a href="#contact"><i class="fa-regular fa-envelope"></i>Contacto</a>
+      <nav class="nav" data-nav id="nav" aria-label="Navegación principal">
+        <a href="#enfoque">Enfoque</a>
+        <a href="#casos">Casos</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#contacto">Contacto</a>
       </nav>
 
-      <div class="nav-ext">
-        <a href="https://github.com/MatiasCaubet" target="_blank" rel="noreferrer">
-          <i class="fa-brands fa-github"></i>GitHub
-        </a>
-        <a href="https://www.linkedin.com/in/matias-caubet" target="_blank" rel="noreferrer">
-          <i class="fa-brands fa-linkedin"></i>LinkedIn
-        </a>
+      <div class="lang" aria-label="Idioma">
+        <a href="/" aria-current="true" lang="es">ES</a>
+        <a href="/en/" lang="en">EN</a>
       </div>
 
-      <div class="lang-switch" aria-label="Cambiar idioma">
-        <a class="lang-btn active" href="/">ES</a>
-        <a class="lang-btn" href="/en/">EN</a>
-      </div>
+      <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav" data-nav-toggle>
+        <span></span>
+      </button>
     </div>
   </header>
 
   <main>
 
-    <!-- ════════════════ HERO ════════════════ -->
-    <section id="hero" aria-label="Presentación">
-      <div class="hero-orb hero-orb--1" data-parallax="0.10"></div>
-      <div class="hero-orb hero-orb--2" data-parallax="0.07"></div>
-      <div class="hero-grid" aria-hidden="true"></div>
-      <span class="ghost ghost-hero" data-parallax="0.04" aria-hidden="true">API</span>
+    <!-- ═════════ HERO ═════════ -->
+    <section class="hero" id="inicio">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="hero-kicker mono">Backend · NLP · Argentina</p>
+          <h1 class="hero-title">Backend con reglas claras <em>e IA</em> donde las reglas terminan.</h1>
+          <p class="hero-sub">
+            Desarrollo APIs y servicios con <strong>Java / Spring Boot</strong>, <strong>C# / .NET</strong> y
+            <strong>Python</strong>. En los proyectos de lenguaje natural primero resuelve lo determinista;
+            el modelo entra solo cuando las reglas no alcanzan, y su respuesta se valida antes de salir.
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-solid" href="#casos">Ver casos y proyectos</a>
+            <a class="btn btn-line" href="https://github.com/MatiasCaubet" target="_blank" rel="noreferrer">
+              <svg aria-hidden="true"><use href="#i-gh"/></svg>GitHub
+            </a>
+            <a class="btn btn-line" href="https://www.linkedin.com/in/matias-caubet" target="_blank" rel="noreferrer">
+              <svg aria-hidden="true"><use href="#i-in"/></svg>LinkedIn
+            </a>
+          </div>
+          <p class="hero-meta mono">
+            <span>APIs REST</span><span>PostgreSQL</span><span>NLP</span><span>Testing</span>
+          </p>
+        </div>
 
+        <figure class="diagram" aria-label="Diagrama: primero lógica, después modelo de IA, y validación de toda propuesta">
+          <div class="diagram-head mono"><span>Fig. 1</span><span>Flujo de un servicio</span></div>
+          <svg viewBox="0 0 360 318" role="img" aria-hidden="true">
+            <path class="flow" d="M8 50 H120 V302" />
+            <path class="tip" d="M114 298 L120 310 L126 298 Z" />
+
+            <rect class="box" x="44" y="20" width="300" height="62" />
+            <text class="lbl" x="58" y="42">01 · LÓGICA</text>
+            <text class="frm" x="330" y="42" text-anchor="end">∀x P(x) → R(x)</text>
+            <text class="ttl" x="58" y="68">Reglas deterministas</text>
+
+            <text class="note" x="132" y="106">solo si ninguna regla aplica</text>
+
+            <rect class="box ai" x="44" y="120" width="300" height="62" />
+            <text class="lbl" x="58" y="142">02 · MODELO DE IA</text>
+            <text class="frm" x="330" y="142" text-anchor="end">p(y | x)</text>
+            <text class="ttl" x="58" y="168">Propone candidatos</text>
+
+            <text class="note" x="132" y="206">toda propuesta se verifica</text>
+
+            <rect class="box" x="44" y="220" width="300" height="62" />
+            <text class="lbl" x="58" y="242">03 · VALIDACIÓN</text>
+            <text class="frm" x="330" y="242" text-anchor="end">y ⊨ C ?</text>
+            <text class="ttl" x="58" y="268">Contra lo que es válido</text>
+          </svg>
+          <figcaption class="diagram-foot">La lógica define el contrato. La IA propone dentro de él.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ═════════ ENFOQUE ═════════ -->
+    <section id="enfoque">
       <div class="wrap">
-        <div class="hero-inner">
+        <header class="sec-head reveal">
+          <p class="sec-num mono"><b>01</b> / Enfoque</p>
+          <h2 class="sec-title">Lo predecible primero, <em>lo flexible</em> después.</h2>
+        </header>
+        <div class="principles">
+          <article class="principle reveal">
+            <p class="mono">i.</p>
+            <h3>Lo determinista primero</h3>
+            <p>Si una regla, una consulta o un índice resuelven el caso, no hace falta un modelo. Es más barato, más rápido y se puede explicar.</p>
+          </article>
+          <article class="principle reveal">
+            <p class="mono">ii.</p>
+            <h3>El modelo propone, las reglas validan</h3>
+            <p>Cuando entra un modelo, su salida se contrasta contra un conjunto cerrado de respuestas válidas. Lo que no cumple, no sale.</p>
+          </article>
+          <article class="principle reveal">
+            <p class="mono">iii.</p>
+            <h3>Trazable y con plan B</h3>
+            <p>Cada resultado indica qué capa lo produjo. Si el componente de IA falla, el servicio sigue respondiendo con lo que sí puede garantizar.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
+    <!-- ═════════ CASOS ═════════ -->
+    <section id="casos">
+      <div class="wrap">
+        <header class="sec-head reveal">
+          <p class="sec-num mono"><b>02</b> / Casos</p>
           <div>
-            <div class="hero-tag reveal">
-              <span class="pulse"></span>
-              Disponible &nbsp;·&nbsp; Backend Java / Python
-            </div>
-
-            <h1 class="hero-title reveal d1">
-              APIs REST <span class="dm">&</span><br>
-              Automatización <span class="hl">Backend</span>
-            </h1>
-
-            <p class="hero-sub reveal d2">
-              Diseño y desarrollo de APIs con <strong>Java / Spring Boot</strong> y <strong>C# / .NET 8</strong>,
-              complementado con <strong>scripting en Python</strong> para automatización de procesos,
-              procesamiento de datos y mejora de flujos internos.
-            </p>
-
-            <div class="hero-cta reveal d3">
-              <a class="btn primary" href="#projects">
-                <i class="fa-solid fa-layer-group"></i>Ver proyectos
-              </a>
-              <a class="btn secondary" href="https://github.com/MatiasCaubet" target="_blank" rel="noreferrer">
-                <i class="fa-brands fa-github"></i>GitHub
-              </a>
-              <a class="btn secondary" href="#contact">
-                <i class="fa-regular fa-paper-plane"></i>Contacto
-              </a>
-            </div>
-
-            <div class="hero-meta reveal d4">
-              <div class="meta-item">
-                <span class="meta-label">Stack</span>
-                <span class="meta-val">Java · Spring · Python · .NET</span>
-              </div>
-              <div class="meta-item">
-                <span class="meta-label">Base de datos</span>
-                <span class="meta-val">PostgreSQL · SQL</span>
-              </div>
-              <div class="meta-item">
-                <span class="meta-label">Foco</span>
-                <span class="meta-val">APIs · Testing · Automation</span>
-              </div>
-            </div>
+            <h2 class="sec-title">Dos casos de <em>lenguaje natural</em>.</h2>
+            <p class="sec-lead">Proyectos académicos y de investigación. Se describen a nivel de arquitectura: el código y los datos no son públicos.</p>
           </div>
+        </header>
 
-          <aside class="hero-panel reveal d2" aria-label="Resumen técnico">
-            <p class="panel-lbl"><i class="fa-solid fa-microchip"></i>Stack principal</p>
-            <div class="chip-row">
-              <span class="chip hi"><i class="fa-brands fa-java"></i>Java</span>
-              <span class="chip hi">Spring Boot</span>
-              <span class="chip hi"><i class="fa-brands fa-python"></i>Python</span>
-              <span class="chip hi"><i class="fa-solid fa-code"></i>C#</span>
-              <span class="chip hi">.NET 8</span>
-              <span class="chip"><i class="fa-solid fa-database"></i>PostgreSQL</span>
-              <span class="chip"><i class="fa-solid fa-key"></i>JWT</span>
-              <span class="chip">REST</span>
-              <span class="chip">Swagger</span>
-              <span class="chip">Docker</span>
+        <div class="cases">
+          <article class="case reveal">
+            <div class="case-side">
+              <span class="case-num">01</span>
+              <span class="case-ctx mono">Proyecto académico<br>Salud</span>
             </div>
-            <hr class="panel-hr" />
-            <p class="panel-lbl"><i class="fa-solid fa-bullseye"></i>Prioridades</p>
-            <ul class="panel-list">
-              <li><i class="fa-solid fa-check"></i>Endpoints claros, DTOs y capas bien definidas</li>
-              <li><i class="fa-solid fa-check"></i>Testing, documentación y código mantenible</li>
-              <li><i class="fa-solid fa-check"></i>Automatización de procesos mediante Python y SQL</li>
-            </ul>
-            <a class="panel-cta" href="#contact">
-              <span>¿Hablamos?</span>
-              <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </a>
-          </aside>
+            <div>
+              <h3>Búsqueda de síntomas escritos en lenguaje coloquial</h3>
+              <p class="case-hook">Que «chuchos de frío» encuentre escalofríos, sin inventar síntomas.</p>
+              <div class="cascade" aria-label="Cascada de búsqueda">
+                <span>exacta</span><i>→</i><span>prefijo</span><i>→</i><span>trigramas</span><i>→</i><span class="ai">embeddings</span><i>→</i><span class="ok">validación</span>
+              </div>
+              <div class="case-cols">
+                <div>
+                  <h4 class="mono">Problema</h4>
+                  <p>El profesional escribe los síntomas como los dice el paciente, y la terminología clínica estándar no siempre usa esas palabras.</p>
+                </div>
+                <div>
+                  <h4 class="mono">Enfoque</h4>
+                  <ul>
+                    <li>Búsqueda exacta y por prefijo</li>
+                    <li>Similitud por trigramas en PostgreSQL</li>
+                    <li>Embeddings solo si lo léxico no alcanza</li>
+                    <li>Toda sugerencia se filtra contra el catálogo de síntomas válidos</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="mono">Resultado</h4>
+                  <p>Modelo cuantizado de 118 a 35 MB y latencia de 5–8 s a ~0,5 s. La herramienta sugiere; el profesional decide.</p>
+                </div>
+              </div>
+              <div class="tags" style="margin-top:20px">
+                <span class="tag">Python</span><span class="tag">PostgreSQL</span><span class="tag">pg_trgm</span><span class="tag">Embeddings</span>
+              </div>
+            </div>
+          </article>
 
+          <article class="case reveal">
+            <div class="case-side">
+              <span class="case-num">02</span>
+              <span class="case-ctx mono">Investigación<br>NLP</span>
+            </div>
+            <div>
+              <h3>Clasificador de oraciones impersonales</h3>
+              <p class="case-hook">Un clasificador que sabe decir «no sé».</p>
+              <div class="cascade" aria-label="Flujo de clasificación">
+                <span>reglas</span><i>→</i><span>¿ambiguo?</span><i>→</i><span class="ai">modelo (próxima etapa)</span>
+              </div>
+              <div class="case-cols">
+                <div>
+                  <h4 class="mono">Problema</h4>
+                  <p>Detectar oraciones impersonales en textos en inglés, una señal útil para revisar la calidad de la redacción técnica.</p>
+                </div>
+                <div>
+                  <h4 class="mono">Enfoque</h4>
+                  <ul>
+                    <li>Reglas sobre el árbol de dependencias</li>
+                    <li>Léxicos acotados para los casos frecuentes</li>
+                    <li>La ambigüedad es un resultado explícito: no se fuerza una etiqueta</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="mono">Resultado</h4>
+                  <p>Microservicio liviano que corre en CPU e informa qué regla produjo cada resultado. Derivar los casos ambiguos a un modelo está diseñado como siguiente etapa.</p>
+                </div>
+              </div>
+              <div class="tags" style="margin-top:20px">
+                <span class="tag">Python</span><span class="tag">spaCy</span><span class="tag">NLP</span><span class="tag">Microservicios</span>
+              </div>
+            </div>
+          </article>
         </div>
-      </div>
-
-      <div class="scroll-cue" aria-hidden="true">
-        <div class="scroll-cue-line"></div>
-        <span>scroll</span>
       </div>
     </section>
 
-    <!-- ════════════════ ABOUT (con foto) ════════════════ -->
-    <section id="about">
-      <span class="ghost ghost-about" data-parallax="-0.05" aria-hidden="true">ABOUT</span>
+    <!-- ═════════ PROYECTOS ═════════ -->
+    <section id="proyectos">
       <div class="wrap">
-
-        <div class="section-eyebrow reveal">
-          <span class="eyebrow-num">01</span>
-          <span class="eyebrow-sep"></span>
-          Acerca de mí
-        </div>
-
-        <!-- foto + texto -->
-        <div class="about-inner">
-
-          <!-- columna foto -->
-          <div class="about-photo-col reveal">
-            <div class="photo-frame">
-              <img src="imagenMatias.jpg" alt="Foto de Matías Caubet" loading="lazy"
-                   onerror="this.style.display='none'" />
-
-            </div>
-            <div class="photo-facts">
-              <div class="photo-fact">
-                <i class="fa-solid fa-location-dot"></i>
-                <span>Argentina</span>
-              </div>
-              <div class="photo-fact">
-                <i class="fa-brands fa-java"></i>
-                <span>Java · Spring Boot</span>
-              </div>
-              <div class="photo-fact">
-                <i class="fa-brands fa-python"></i>
-                <span>Python · Automatización</span>
-              </div>
-              <div class="photo-fact">
-                <i class="fa-solid fa-code"></i>
-                <span>C# · .NET 8</span>
-              </div>
-              <div class="photo-fact">
-                <i class="fa-solid fa-database"></i>
-                <span>PostgreSQL · SQL</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- columna texto -->
-          <div class="about-text">
-            <h2 class="section-title reveal d1">Transformo requerimientos<br>en soluciones reales.</h2>
-
-            <p class="about-body reveal d2">
-              Desarrollador Backend con formación en <strong>informática y ciencias sociales</strong>,
-              orientado a construir APIs bien diseñadas, servicios mantenibles y soluciones técnicas
-              que respondan a problemas concretos. Trabajo con Java/Spring Boot y C#/.NET,
-              diseño endpoints robustos, implemento autenticación JWT y organizo proyectos
-              con arquitectura por capas, DTOs, documentación y testing.
-            </p>
-            <p class="about-body reveal d2" style="margin-top:-10px;">
-              También trabajo con <strong>Python y SQL</strong> para automatización de tareas,
-              procesamiento de datos, construcción de KPIs y mejora de flujos operativos.
-              Combino experiencia técnica y trayectoria analítica para identificar procesos
-              automatizables y convertirlos en herramientas útiles, claras y sostenibles.
-            </p>
-
-            <div class="skill-pills reveal d3">
-              <span class="skill-pill"><i class="fa-solid fa-layer-group"></i>Arquitectura en capas</span>
-              <span class="skill-pill"><i class="fa-solid fa-right-left"></i>DTOs</span>
-              <span class="skill-pill"><i class="fa-solid fa-key"></i>JWT</span>
-              <span class="skill-pill"><i class="fa-brands fa-python"></i>Python</span>
-              <span class="skill-pill"><i class="fa-solid fa-gears"></i>Automatización</span>
-              <span class="skill-pill"><i class="fa-solid fa-database"></i>SQL</span>
-              <span class="skill-pill"><i class="fa-solid fa-code"></i>Clean Code</span>
-              <span class="skill-pill"><i class="fa-solid fa-chart-line"></i>KPIs</span>
-              <span class="skill-pill"><i class="fa-solid fa-vial"></i>Testing</span>
-            </div>
-
-            <div class="about-actions reveal d4">
-              <a class="btn primary" href="#projects">
-                <i class="fa-solid fa-layer-group"></i>Ver proyectos
-              </a>
-              <a class="btn secondary" href="https://www.linkedin.com/in/matias-caubet" target="_blank" rel="noreferrer">
-                <i class="fa-brands fa-linkedin"></i>LinkedIn
-              </a>
-              <a class="btn secondary" href="#repos">
-                <i class="fa-solid fa-code-branch"></i>Repos
-              </a>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- stat row full-width -->
-        <div class="stat-row reveal d2">
-          <div class="stat-card">
-            <div class="stat-icon"><i class="fa-solid fa-server"></i></div>
-            <div class="stat-key">Backend</div>
-            <div class="stat-val">Diseño de APIs, capas y contratos</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-icon"><i class="fa-solid fa-gears"></i></div>
-            <div class="stat-key">Automatización</div>
-            <div class="stat-val">Scripts, procesos y flujos internos</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-icon"><i class="fa-solid fa-database"></i></div>
-            <div class="stat-key">Datos</div>
-            <div class="stat-val">SQL, KPIs, tableros y análisis</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-icon"><i class="fa-solid fa-shield-halved"></i></div>
-            <div class="stat-key">Calidad</div>
-            <div class="stat-val">Testing, docs, legibilidad</div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ════════════════ CTA BAND ════════════════ -->
-    <section id="cta-band" aria-label="Llamado a la acción">
-      <div class="cta-bg" data-parallax="0.09" aria-hidden="true">
-        <div class="cta-sheen"></div>
-        <div class="cta-lines"></div>
-      </div>
-      <div class="wrap">
-        <div class="cta-inner reveal">
+        <header class="sec-head reveal">
+          <p class="sec-num mono"><b>03</b> / Proyectos</p>
           <div>
-            <h2 class="cta-title">¿Querés revisar el código<br>y la documentación?</h2>
-            <p class="cta-sub">Cada proyecto incluye estructura por capas, endpoints documentados y guía para correr localmente.</p>
+            <h2 class="sec-title">Proyectos de <em>desarrollo</em>.</h2>
+            <p class="sec-lead">APIs y aplicaciones con código público: capas bien separadas, DTOs, autenticación y documentación.</p>
           </div>
-          <div class="cta-actions">
-            <a class="btn primary" href="https://github.com/MatiasCaubet" target="_blank" rel="noreferrer">
-              <i class="fa-brands fa-github"></i>Abrir GitHub
-            </a>
-            <a class="btn secondary" href="#contact">
-              <i class="fa-regular fa-paper-plane"></i>Contactarme
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
+        </header>
 
-    <!-- ════════════════ PROJECTS ════════════════ -->
-    <section id="projects">
-      <span class="ghost ghost-projects" data-parallax="0.06" aria-hidden="true">PROJECTS</span>
-      <div class="wrap">
-
-        <div class="sec-header">
-          <div class="sec-header-left">
-            <div class="section-eyebrow reveal">
-              <span class="eyebrow-num">02</span>
-              <span class="eyebrow-sep"></span>
-              Proyectos
-            </div>
-            <h2 class="section-title reveal d1" style="margin-bottom:0;">Proyectos destacados</h2>
-            <span class="sec-count reveal d2">
-              <i class="fa-regular fa-folder-open"></i>
-              5 proyectos · backend, APIs REST y arquitectura
-            </span>
-          </div>
-          <div class="filters reveal d2">
-            <button class="filter-btn active" type="button" data-filter="all">
-              <i class="fa-solid fa-border-all"></i>Todos
-            </button>
-            <button class="filter-btn" type="button" data-filter="spring">
-              <i class="fa-brands fa-java"></i>Spring
-            </button>
-            <button class="filter-btn" type="button" data-filter="dotnet">
-              <i class="fa-solid fa-code"></i>.NET
-            </button>
-            <button class="filter-btn" type="button" data-filter="fullstack">
-              <i class="fa-solid fa-cube"></i>Full Stack
-            </button>
-            <button class="filter-btn" type="button" data-filter="academic">
-              <i class="fa-solid fa-graduation-cap"></i>Académico
-            </button>
-          </div>
+        <div class="filters reveal" role="group" aria-label="Filtrar proyectos">
+          <button class="filter" type="button" data-filter="all" aria-pressed="true">Todos</button>
+          <button class="filter" type="button" data-filter="spring" aria-pressed="false">Spring</button>
+          <button class="filter" type="button" data-filter="dotnet" aria-pressed="false">.NET</button>
+          <button class="filter" type="button" data-filter="grupal" aria-pressed="false">En equipo</button>
         </div>
 
         <div class="pgrid">
-
-          <article class="pcard reveal" data-tags="spring fullstack">
-            <div class="pcard-head">
-              <span class="pcard-num">01</span>
-              <div class="pcard-badges">
-                <span class="badge">Spring Boot</span>
-                <span class="badge">React</span>
-                <span class="badge">Full Stack</span>
-              </div>
-            </div>
-            <h3 class="pcard-title">Notes App</h3>
-            <p class="pcard-desc">Full stack para gestión de notas con tags, archivado, backend REST y frontend Vite/React. Flujo CRUD completo con DTOs y servicios separados.</p>
-            <ul class="pcard-bullets">
-              <li><i class="fa-solid fa-circle-dot"></i>Endpoints REST y DTOs bien definidos</li>
-              <li><i class="fa-solid fa-circle-dot"></i>UI rápida con Vite + React</li>
-              <li><i class="fa-solid fa-circle-dot"></i>Flujo CRUD end-to-end</li>
+          <article class="pcard reveal" data-tags="spring grupal">
+            <div class="pcard-top mono"><span>Ingeniería de Software 2</span><span>Equipo de 6</span></div>
+            <h3>Sistema de gestión para un gimnasio</h3>
+            <p>Clases, alumnos, profesores, asistencias y pagos. Desarrollado en equipo a partir de historias de usuario y demos con el cliente.</p>
+            <ul>
+              <li>Análisis y redacción de historias de usuario</li>
+              <li>Entidades, repositorios y servicios en Spring Boot</li>
+              <li>Reglas de negocio al crear clases: sin superposición de horarios por profesor, sin fines de semana ni fechas pasadas</li>
+              <li>Clases recurrentes con un modelo de plantilla e instancias</li>
             </ul>
-            <div class="pcard-links">
-              <a class="pcard-link" href="https://github.com/MatiasCaubet/SpringBoot/tree/main/Note" target="_blank" rel="noreferrer">
-                <span><i class="fa-brands fa-github"></i>Ver proyecto en GitHub</span>
-                <i class="fa-solid fa-arrow-up-right-from-square arr"></i>
-              </a>
+            <div class="tags">
+              <span class="tag">Spring Boot</span><span class="tag">React</span><span class="tag">PostgreSQL</span><span class="tag">Docker</span><span class="tag">Mercado Pago</span>
             </div>
-          </article>
-
-          <article class="pcard reveal d1" data-tags="spring">
-            <div class="pcard-head">
-              <span class="pcard-num">02</span>
-              <div class="pcard-badges">
-                <span class="badge">Spring Boot</span>
-                <span class="badge">REST</span>
-              </div>
-            </div>
-            <h3 class="pcard-title">Supermercado API</h3>
-            <p class="pcard-desc">API con productos, ventas y sucursales. Arquitectura en capas, DTOs, mapeos y documentación orientada a testing con Postman.</p>
-            <ul class="pcard-bullets">
-              <li><i class="fa-solid fa-circle-dot"></i>Servicios y capas bien separadas</li>
-              <li><i class="fa-solid fa-circle-dot"></i>DTOs y mapeos explícitos</li>
-              <li><i class="fa-solid fa-circle-dot"></i>Soporte para testing con Postman</li>
-            </ul>
-            <div class="pcard-links">
-              <a class="pcard-link" href="https://github.com/MatiasCaubet/SpringBoot/tree/main/supermercado" target="_blank" rel="noreferrer">
-                <span><i class="fa-brands fa-github"></i>Ver proyecto en GitHub</span>
-                <i class="fa-solid fa-arrow-up-right-from-square arr"></i>
-              </a>
-            </div>
-          </article>
-
-          <article class="pcard reveal" data-tags="spring">
-            <div class="pcard-head">
-              <span class="pcard-num">03</span>
-              <div class="pcard-badges">
-                <span class="badge">Spring Boot</span>
-                <span class="badge">Maven</span>
-              </div>
-            </div>
-            <h3 class="pcard-title">Bazar API</h3>
-            <p class="pcard-desc">Backend Java con estructura Maven, endpoints documentados y modelado UML. Proyecto base con buenas prácticas de organización y estructura.</p>
-            <ul class="pcard-bullets">
-              <li><i class="fa-solid fa-circle-dot"></i>Estructura Maven estándar</li>
-              <li><i class="fa-solid fa-circle-dot"></i>Documentación de endpoints</li>
-              <li><i class="fa-solid fa-circle-dot"></i>Diagramas UML</li>
-            </ul>
-            <div class="pcard-links">
-              <a class="pcard-link" href="https://github.com/MatiasCaubet/SpringBoot/tree/main/Bazar" target="_blank" rel="noreferrer">
-                <span><i class="fa-brands fa-github"></i>Ver proyecto en GitHub</span>
-                <i class="fa-solid fa-arrow-up-right-from-square arr"></i>
-              </a>
-            </div>
-          </article>
-
-          <article class="pcard reveal d1" data-tags="dotnet">
-            <div class="pcard-head">
-              <span class="pcard-num">04</span>
-              <div class="pcard-badges">
-                <span class="badge">.NET 8</span>
-                <span class="badge">JWT</span>
-                <span class="badge">PostgreSQL</span>
-              </div>
-            </div>
-            <h3 class="pcard-title">EventHub API</h3>
-            <p class="pcard-desc">API REST para gestión de eventos y tickets. Arquitectura por capas con JWT, Swagger y PostgreSQL. El proyecto más completo del stack .NET.</p>
-            <ul class="pcard-bullets">
-              <li><i class="fa-solid fa-circle-dot"></i>Autenticación JWT</li>
-              <li><i class="fa-solid fa-circle-dot"></i>Documentación Swagger</li>
-              <li><i class="fa-solid fa-circle-dot"></i>Layered architecture en C#</li>
-            </ul>
-            <div class="pcard-links">
-              <a class="pcard-link" href="https://github.com/MatiasCaubet/DotNet" target="_blank" rel="noreferrer">
-                <span><i class="fa-brands fa-github"></i>Ver repositorio .NET</span>
-                <i class="fa-solid fa-arrow-up-right-from-square arr"></i>
-              </a>
-            </div>
-          </article>
-
-          <article class="pcard pcard-wide reveal" data-tags="dotnet academic">
-            <div style="flex:1;min-width:0;">
-              <div class="pcard-head">
-                <span class="pcard-num">05</span>
-                <div class="pcard-badges">
-                  <span class="badge">Académico</span>
-                  <span class="badge">Grupal</span>
-                  <span class="badge">2025</span>
-                </div>
-              </div>
-              <h3 class="pcard-title">Proyecto grupal DotNet</h3>
-              <p class="pcard-desc">Trabajo grupal para el Seminario de Lenguajes DotNet (2025). Desarrollo colaborativo en C# con metodología académica y código revisado en equipo.</p>
-            </div>
-            <div class="pcard-links" style="min-width:170px;flex-shrink:0;">
-              <a class="pcard-link" href="https://github.com/MatiasCaubet/ProyectoDotNet-grupal" target="_blank" rel="noreferrer">
-                <span><i class="fa-brands fa-github"></i>Ver repositorio</span>
-                <i class="fa-solid fa-arrow-up-right-from-square arr"></i>
-              </a>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ════════════════ REPOS ════════════════ -->
-    <section id="repos">
-      <span class="ghost ghost-repos" data-parallax="-0.04" aria-hidden="true">REPOS</span>
-      <div class="wrap">
-        <div class="section-head">
-          <div class="section-eyebrow reveal">
-            <span class="eyebrow-num">03</span>
-            <span class="eyebrow-sep"></span>
-            Repositorios
-          </div>
-          <h2 class="section-title reveal d1">Repositorios principales</h2>
-          <p class="section-body reveal d2">Acceso rápido a los repos contenedores con todos los proyectos.</p>
-        </div>
-        <div class="repos-grid">
-          <div class="rcard reveal">
-            <div class="rcard-top">
-              <div class="rcard-icon"><i class="fa-brands fa-java"></i></div>
-              <h3 class="rcard-title">SpringBoot</h3>
-            </div>
-            <p class="rcard-desc">Repositorio contenedor de proyectos backend y full stack con Java + Spring Boot. Incluye Notes App, Supermercado API y Bazar API, con foco en APIs REST, DTOs, arquitectura por capas y documentación.</p>
-            <div class="rcard-foot">
-              <div class="rcard-chips">
-                <span class="chip">Java</span>
-                <span class="chip">Spring</span>
-                <span class="chip">Maven</span>
-              </div>
-              <a class="rcard-open" href="https://github.com/MatiasCaubet/SpringBoot" target="_blank" rel="noreferrer">
-                <i class="fa-brands fa-github"></i>Abrir
-              </a>
-            </div>
-          </div>
-          <div class="rcard reveal d1">
-            <div class="rcard-top">
-              <div class="rcard-icon"><i class="fa-solid fa-code"></i></div>
-              <h3 class="rcard-title">DotNet</h3>
-            </div>
-            <p class="rcard-desc">Repositorio de proyectos en C# / .NET con APIs backend, arquitectura por capas, JWT, PostgreSQL y documentación Swagger/OpenAPI.</p>
-            <div class="rcard-foot">
-              <div class="rcard-chips">
-                <span class="chip">C#</span>
-                <span class="chip">.NET 8</span>
-                <span class="chip">JWT</span>
-              </div>
-              <a class="rcard-open" href="https://github.com/MatiasCaubet/DotNet" target="_blank" rel="noreferrer">
-                <i class="fa-brands fa-github"></i>Abrir
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ════════════════ CONTACT ════════════════ -->
-    <section id="contact">
-      <span class="ghost ghost-contact" data-parallax="0.04" aria-hidden="true">CONTACT</span>
-      <div class="wrap">
-        <div class="contact-inner">
-
-          <div>
-            <div class="section-eyebrow reveal">
-              <span class="eyebrow-num">04</span>
-              <span class="eyebrow-sep"></span>
-              Contacto
-            </div>
-            <h2 class="section-title reveal d1">Hablemos<br>de tu proyecto.</h2>
-            <p class="section-body reveal d2">
-              Si querés coordinar una charla, revisar proyectos en detalle o simplemente
-              conectar, escribime por cualquiera de estos canales.
-            </p>
-
-            <div class="contact-cards reveal d3">
-              <a class="ccard" href="https://www.linkedin.com/in/matias-caubet" target="_blank" rel="noreferrer">
-                <div class="ccard-l">
-                  <div class="ccard-ico"><i class="fa-brands fa-linkedin-in"></i></div>
-                  <div>
-                    <p class="ccard-lbl">LinkedIn</p>
-                    <p class="ccard-val">Ver perfil profesional</p>
-                  </div>
-                </div>
-                <i class="fa-solid fa-arrow-up-right-from-square ccard-arr"></i>
-              </a>
-              <a class="ccard" href="mailto:caubetmatias@gmail.com">
-                <div class="ccard-l">
-                  <div class="ccard-ico"><i class="fa-regular fa-envelope"></i></div>
-                  <div>
-                    <p class="ccard-lbl">Email</p>
-                    <p class="ccard-val">caubetmatias@gmail.com</p>
-                  </div>
-                </div>
-                <i class="fa-solid fa-arrow-right ccard-arr"></i>
-              </a>
-              <a class="ccard" href="https://github.com/MatiasCaubet" target="_blank" rel="noreferrer">
-                <div class="ccard-l">
-                  <div class="ccard-ico"><i class="fa-brands fa-github"></i></div>
-                  <div>
-                    <p class="ccard-lbl">GitHub</p>
-                    <p class="ccard-val">MatiasCaubet</p>
-                  </div>
-                </div>
-                <i class="fa-solid fa-arrow-up-right-from-square ccard-arr"></i>
-              </a>
-            </div>
-          </div>
-
-          <div class="info-panel reveal d2">
-            <div class="avail-bar">
-              <span class="avail-dot"></span>
-              <span class="avail-txt"><i class="fa-solid fa-circle-check" style="margin-right:6px;"></i>Disponible para proyectos y oportunidades</span>
-            </div>
-            <p class="panel-lbl"><i class="fa-solid fa-microchip"></i>Stack con el que trabajo</p>
-            <div class="info-stack">
-              <span class="chip hi"><i class="fa-brands fa-java"></i>Java</span>
-              <span class="chip hi">Spring Boot</span>
-              <span class="chip hi"><i class="fa-brands fa-python"></i>Python</span>
-              <span class="chip hi"><i class="fa-solid fa-code"></i>C#</span>
-              <span class="chip hi">.NET 8</span>
-              <span class="chip"><i class="fa-solid fa-database"></i>PostgreSQL</span>
-              <span class="chip"><i class="fa-solid fa-key"></i>JWT</span>
-              <span class="chip">REST APIs</span>
-              <span class="chip">Swagger</span>
-              <span class="chip">Postman</span>
-              <span class="chip">Docker</span>
-              <span class="chip"><i class="fa-solid fa-table"></i>SQL</span>
-              <span class="chip"><i class="fa-solid fa-gears"></i>Automatización</span>
-            </div>
-            <hr class="panel-hr" />
-            <p class="panel-lbl"><i class="fa-regular fa-star"></i>Lo que podés esperar</p>
-            <div class="principles">
-              <div class="principle">
-                <span class="pnum">01</span>
-                Código limpio, mantenible y documentado desde el inicio.
-              </div>
-              <div class="principle">
-                <span class="pnum">02</span>
-                APIs bien diseñadas con contratos claros y pruebas.
-              </div>
-              <div class="principle">
-                <span class="pnum">03</span>
-                Automatización pragmática para mejorar procesos reales.
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <footer class="footer">
-          <p class="footer-copy">© <span class="js-year"></span> Matías Caubet — Portfolio personal</p>
-          <div class="footer-links">
-            <a href="https://github.com/MatiasCaubet" target="_blank" rel="noreferrer">
-              <i class="fa-brands fa-github"></i>GitHub
+            <a class="pcard-link" href="https://github.com/TomasMessineo/sistema-actividades-is2" target="_blank" rel="noreferrer">
+              <span>Ver repositorio</span><svg aria-hidden="true"><use href="#i-arrow"/></svg>
             </a>
+          </article>
+
+          <article class="pcard reveal" data-tags="dotnet">
+            <div class="pcard-top mono"><span>API REST</span><span>C# · .NET 8</span></div>
+            <h3>EventHub API</h3>
+            <p>Gestión de eventos y tickets con arquitectura por capas, autenticación JWT y documentación OpenAPI.</p>
+            <ul>
+              <li>Autenticación y autorización con JWT</li>
+              <li>Persistencia en PostgreSQL</li>
+              <li>Endpoints documentados con Swagger</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">.NET 8</span><span class="tag">JWT</span><span class="tag">PostgreSQL</span><span class="tag">Swagger</span>
+            </div>
+            <a class="pcard-link" href="https://github.com/MatiasCaubet/DotNet" target="_blank" rel="noreferrer">
+              <span>Ver repositorio</span><svg aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+          </article>
+        </div>
+
+        <ul class="plist">
+          <li class="reveal" data-tags="spring">
+            <a class="plist-name" href="https://github.com/MatiasCaubet/SpringBoot/tree/main/Note" target="_blank" rel="noreferrer">Notes App</a>
+            <div class="tags"><span class="tag">Spring Boot</span><span class="tag">React</span></div>
+            <p>Full stack de notas con etiquetas y archivado: backend REST y frontend con Vite y React.</p>
+          </li>
+          <li class="reveal" data-tags="spring">
+            <a class="plist-name" href="https://github.com/MatiasCaubet/SpringBoot/tree/main/supermercado" target="_blank" rel="noreferrer">Supermercado API</a>
+            <div class="tags"><span class="tag">Spring Boot</span><span class="tag">REST</span></div>
+            <p>Productos, ventas y sucursales, con DTOs y mapeos explícitos y colección de pruebas en Postman.</p>
+          </li>
+          <li class="reveal" data-tags="spring">
+            <a class="plist-name" href="https://github.com/MatiasCaubet/SpringBoot/tree/main/Bazar" target="_blank" rel="noreferrer">Bazar API</a>
+            <div class="tags"><span class="tag">Spring Boot</span><span class="tag">Maven</span></div>
+            <p>Backend Java con estructura Maven, endpoints documentados y modelado UML.</p>
+          </li>
+          <li class="reveal" data-tags="dotnet grupal">
+            <a class="plist-name" href="https://github.com/MatiasCaubet/ProyectoDotNet-grupal" target="_blank" rel="noreferrer">Proyecto grupal .NET</a>
+            <div class="tags"><span class="tag">C#</span><span class="tag">Académico</span></div>
+            <p>Trabajo del Seminario de Lenguajes .NET (2025), desarrollado y revisado en equipo.</p>
+          </li>
+        </ul>
+
+        <p class="repos mono reveal">
+          Repositorios:
+          <a href="https://github.com/MatiasCaubet/SpringBoot" target="_blank" rel="noreferrer">SpringBoot ↗</a>
+          <a href="https://github.com/MatiasCaubet/DotNet" target="_blank" rel="noreferrer">DotNet ↗</a>
+          <a href="https://github.com/MatiasCaubet" target="_blank" rel="noreferrer">Perfil completo ↗</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ═════════ SOBRE MÍ ═════════ -->
+    <section id="sobre-mi">
+      <div class="wrap">
+        <header class="sec-head reveal">
+          <p class="sec-num mono"><b>04</b> / Sobre mí</p>
+          <h2 class="sec-title">Del requerimiento a un servicio <em>que se pueda explicar</em>.</h2>
+        </header>
+        <div class="about">
+          <figure class="photo reveal">
+            <img src="imagenMatias.jpg" alt="Foto de Matías Caubet" width="792" height="862" decoding="async" />
+            <figcaption class="mono">Argentina</figcaption>
+          </figure>
+          <div class="about-text reveal">
+            <p class="lead">Desarrollador backend con formación en informática y en ciencias sociales.</p>
+            <p>Esa combinación me hace mirar dos cosas a la vez: cómo está construido un sistema y cómo lo usa la gente. Trabajo con <strong>Java / Spring Boot</strong> y <strong>C# / .NET</strong> en APIs con capas claras, DTOs, autenticación JWT, documentación y tests.</p>
+            <p>Con <strong>Python y SQL</strong> automatizo procesos y trabajo con datos. En proyectos académicos y de investigación aplico NLP con un criterio simple: usar IA donde las reglas se terminan, no en lugar de las reglas.</p>
+            <dl class="stack">
+              <div><dt class="mono">Lenguajes</dt><dd>Java · C# · Python · SQL</dd></div>
+              <div><dt class="mono">Backend</dt><dd>Spring Boot · .NET 8 · Flask</dd></div>
+              <div><dt class="mono">Datos</dt><dd>PostgreSQL · pg_trgm · pandas</dd></div>
+              <div><dt class="mono">NLP</dt><dd>spaCy · embeddings</dd></div>
+              <div><dt class="mono">Frontend</dt><dd>React · Vue</dd></div>
+              <div><dt class="mono">Herramientas</dt><dd>Docker · Git · Swagger · Postman</dd></div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═════════ CONTACTO ═════════ -->
+    <section class="contact" id="contacto">
+      <div class="wrap">
+        <div class="contact-grid">
+          <div class="reveal">
+            <span class="mono">05 / Contacto</span>
+            <h2>¿Hablamos de <em>tu proyecto</em>?</h2>
+            <p>Para oportunidades laborales, colaborar en un proyecto o revisar alguno de estos casos en detalle.</p>
+          </div>
+          <div class="clinks reveal">
             <a href="https://www.linkedin.com/in/matias-caubet" target="_blank" rel="noreferrer">
-              <i class="fa-brands fa-linkedin"></i>LinkedIn
+              <span class="k">LinkedIn</span><span class="v">matias-caubet</span><svg aria-hidden="true"><use href="#i-arrow"/></svg>
             </a>
             <a href="mailto:caubetmatias@gmail.com">
-              <i class="fa-regular fa-envelope"></i>Email
+              <span class="k">Email</span><span class="v">caubetmatias@gmail.com</span><svg aria-hidden="true"><use href="#i-mail"/></svg>
+            </a>
+            <a href="https://github.com/MatiasCaubet" target="_blank" rel="noreferrer">
+              <span class="k">GitHub</span><span class="v">MatiasCaubet</span><svg aria-hidden="true"><use href="#i-arrow"/></svg>
             </a>
           </div>
+        </div>
+        <footer class="footer mono">
+          <span>© <span class="js-year">2026</span> Matías Caubet</span>
+          <span>HTML, CSS y JS, sin frameworks</span>
         </footer>
       </div>
     </section>
